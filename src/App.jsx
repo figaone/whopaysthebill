@@ -13,7 +13,7 @@ const App = () => {
 
   const context = useContext(MyContext)
 
-  console.log(context)
+  
 
   return(
     <div className='wrapper'>
