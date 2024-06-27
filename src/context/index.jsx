@@ -46,6 +46,11 @@ const MyProvider = (props) => {
         console.log(result)
     }
 
+    const resetGameHandler = () => {
+        setStage(1);
+        setPlayers([]);
+        setResult('')
+    }
 
     return (
         <>
@@ -57,7 +62,9 @@ const MyProvider = (props) => {
                 //METHODS
                 addPlayer:addPlayerHandler,
                 removePlayer:removePlayerHandler,
-                next:nextHandler
+                next:nextHandler,
+                resetGame: resetGameHandler,
+                getNewLooser: generateLooser
             }}>
                 {props.children}
             </MyContext.Provider>
