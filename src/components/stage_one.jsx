@@ -37,6 +37,7 @@ const Stage1 = () => {
         return true
     }
 
+    
     console.log(context)
 
     return (
@@ -80,6 +81,12 @@ const Stage1 = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <div
+                                className="action_button"
+                                onClick={()=>context.next()}
+                            >
+                                NEXT
+                            </div>
                         </div>
                     </>
                 :
