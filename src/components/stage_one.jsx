@@ -73,7 +73,7 @@ const Stage1 = () => {
                                         {player}
                                         <span
                                             className="badge badge-danger"
-                                            onClick={()=> alert('delete')}
+                                            onClick={()=> context.removePlayer(idx)}
                                         >
                                             X
                                         </span>

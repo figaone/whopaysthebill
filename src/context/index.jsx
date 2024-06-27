@@ -18,6 +18,13 @@ const MyProvider = (props) => {
         ]))
     }
 
+    const removePlayerHandler = (idx) => {
+        let newArray = [...players];
+        newArray.splice(idx,1);
+
+        setPlayers(newArray);
+    }
+
 
     return (
         <MyContext.Provider value={{
@@ -25,8 +32,9 @@ const MyProvider = (props) => {
             stage:stage,
             players:players,
             result:result,
-
-            addPlayer:addPlayerHandler
+            //METHODS
+            addPlayer:addPlayerHandler,
+            removePlayer:removePlayerHandler
         }}>
             {props.children}
         </MyContext.Provider>
